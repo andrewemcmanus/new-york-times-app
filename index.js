@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 
       for (let i=0; i < len; i++) {
         let movieResultObject = response.data.results[i];
+        // create a model for the data that will be in the database!
         const finalObject = {
           title: movieResultObject.display_title,
           byline: movieResultObject.byline,
@@ -32,7 +33,6 @@ app.get('/', (req, res) => {
           url: movieResultObject.link.url
         }
         console.log(finalObject);
-
       }
       // display_title, byline, headline, publication_date, link.url
     }
